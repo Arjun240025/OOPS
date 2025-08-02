@@ -1,0 +1,18 @@
+class Student {
+    String name, dept;
+    char sec;
+    int reg_no;
+}
+public class Main {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.name = "Dev";
+        obj.dept = "CSE";
+        obj.sec = 'A';
+        obj.reg_no = 12;
+        System.out.println("Name      : " + obj.name);
+        System.out.println("Reg No    : " + obj.reg_no);
+        System.out.println("Department: " + obj.dept);
+        System.out.println("Section   : " + obj.sec);
+    }
+}
