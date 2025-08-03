@@ -1,0 +1,31 @@
+// Method Overloading : Sample program
+
+class A {
+    int a;
+    String name, s;
+
+    void set(int a) {
+        this.a = a;
+        System.out.println("The value of a is " + a);
+    }
+
+    void get(int a, String name) {
+        this.a = a;
+        this.name = name;
+        System.out.println("The value of a is " + a + ", name is " + name);
+    }
+
+    void get(String name, String s) {
+        this.name = name;
+        this.s = s;
+        System.out.println("The value of name: " + name + ", s: " + s);
+    }
+
+    public static void main(String[] args) {
+        A obj = new A();
+
+        obj.get("Jonna", "Yrr11");
+        obj.get(10, "Kavi");
+        obj.set(8);
+    }
+}
