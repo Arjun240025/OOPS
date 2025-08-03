@@ -1,0 +1,18 @@
+// Class definition
+class A {
+    int b, c;
+
+    // Method to add b and c, and print the result
+    void add() {
+        int d = b + c;
+        System.out.println("The value of c is " + d);
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        A obj = new A();  // Object creation
+        obj.b = 3;        // Assign value to b
+        obj.c = 5;        // Assign value to c
+        obj.add();        // Call add method
+    }
+}
