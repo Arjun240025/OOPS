@@ -1,0 +1,18 @@
+class Circle {
+    float area;
+    float radius;
+
+    void findRadius() {
+        radius = (float) Math.sqrt(area / 3.14f);
+        System.out.println("Area = " + area);
+        System.out.println("Radius = " + radius);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle obj = new Circle();
+        obj.area = 314f; // Example area in float
+        obj.findRadius();
+    }
+}
