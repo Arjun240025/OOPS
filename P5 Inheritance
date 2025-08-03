@@ -1,0 +1,22 @@
+// Parent class
+class Name1 {
+    void set() {
+        System.out.println("This is Name1 (Superclass)");
+    }
+}
+
+// Child class
+class Name2 extends Name1 {
+    void get() {
+        System.out.println("This is Name2 (Subclass)");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Name2 obj = new Name2();
+        obj.set();  // Call method from parent class (Name1)
+        obj.get();  // Call method from child class (Name2)
+    }
+}
