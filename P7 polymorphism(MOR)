@@ -1,0 +1,21 @@
+class B 
+{
+    public void get()
+    {
+        System.out.println("This is superclass");
+        
+    }
+}
+class C extends B
+{
+    @Override public void get()
+    {
+        System.out.println("This is sub class");
+    }
+}
+public class Main{
+public static void main(String[] args)
+{
+    B obj = new C();
+    obj.get();
+}}
