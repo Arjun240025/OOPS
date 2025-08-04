@@ -1,0 +1,70 @@
+// Author.java
+class Author {
+    String name;
+
+    Author(String name) {
+        this.name = name;
+    }
+}
+
+// Book.java
+class Book {
+    String title;
+    Author author;
+    boolean isBorrowed;
+
+    Book(String title, Author author) {
+        this.title = title;
+        this.author = author;
+        this.isBorrowed = false;
+    }
+
+    void borrow() {
+        if (!isBorrowed) {
+            isBorrowed = true;
+            System.out.println("Book '" + title + "' has been borrowed.");
+        } else {
+            System.out.println("Book '" + title + "' is already borrowed.");
+        }
+    }
+
+    void returnBook() {
+        if (isBorrowed) {
+            isBorrowed = false;
+            System.out.println("Book '" + title + "' has been returned.");
+        } else {
+            System.out.println("Book '" + title + "' was not borrowed.");
+        }
+    }
+}
+
+// Member.java
+class Member {
+    String name;
+
+    Member(String name) {
+        this.name = name;
+    }
+
+    void borrowBook(Book book) {
+        System.out.println(name + " is trying to borrow '" + book.title + "'...");
+        book.borrow();
+    }
+
+    void returnBook(Book book) {
+        System.out.println(name + " is returning '" + book.title + "'...");
+        book.returnBook();
+    }
+}
+
+// Main.java
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        Author author1 = new Author("J.K. Rowling");
+        Book book1 = new Book("Harry Potter and the Philosopher's Stone", author1);
+        Member member1 = new Member("Alice");
+
+        member1.borrowBook(book1);    // Borrow book
+        member1.returnBook(book1);    // Return book
+    }
+}
