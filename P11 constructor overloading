@@ -1,0 +1,26 @@
+class Box {
+    double w, h, d;
+
+    // Default Constructor
+    Box() {
+        System.out.println("This is the default constructor");
+        w = 1;
+        h = 1;
+        d = 1;
+        System.out.println("w = " + w + ", h = " + h + ", d = " + d);
+    }
+
+    // Parameterized Constructor
+    Box(double a, double b, double c) {
+        System.out.println("This is the parameterized constructor");
+        w = a;
+        h = b;
+        d = c;
+        System.out.println("w = " + w + ", h = " + h + ", d = " + d);
+    }
+
+    public static void main(String[] args) {
+        Box box1 = new Box();               // Calls default constructor
+        Box box2 = new Box(5, 10, 15);      // Calls parameterized constructor
+    }
+}
