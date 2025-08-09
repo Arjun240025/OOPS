@@ -1,0 +1,23 @@
+class Abc {
+    int RegNo;
+    String Name;
+
+    // Parameterized constructor
+    Abc(int R, String N) {
+        this.RegNo = R;
+        this.Name = N;
+        System.out.println("RegNo: " + RegNo + "  Name: " + Name);
+    }
+
+    // Optional method to display
+    void display() {
+        System.out.println("RegNo: " + RegNo + "  Name: " + Name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Abc ob = new Abc(12, "RIT"); // constructor is called automatically
+        // ob.display(); // if you want to call display separately
+    }
+}
