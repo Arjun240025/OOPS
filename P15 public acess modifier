@@ -1,0 +1,15 @@
+class A {
+    public int a = 10; // public access modifier
+
+    void display() {
+        System.out.println("The value of a is: " + a);
+    }
+}
+
+public class C {
+    public static void main(String[] args) {
+        A obj = new A();
+        obj.a = 30; // Allowed from anywhere
+        obj.display();
+    }
+}
