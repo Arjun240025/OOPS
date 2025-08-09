@@ -1,0 +1,15 @@
+class A {
+    int a = 10; // default access modifier (package-private)
+
+    void display() {
+        System.out.println("The value of a is: " + a);
+    }
+}
+
+public class C {
+    public static void main(String[] args) {
+        A obj = new A();
+        obj.a = 20; // Allowed in the same package
+        obj.display(); 
+    }
+}
