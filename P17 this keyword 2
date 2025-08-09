@@ -1,0 +1,22 @@
+class Abc {
+    int RegNo;
+    String Name;
+
+    // Normal void method
+    void setData(int R, String N) {
+        this.RegNo = R;
+        this.Name = N;
+    }
+
+    void display() {
+        System.out.println("RegNo: " + RegNo + "  Name: " + Name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Abc ob = new Abc(); // object created
+        ob.setData(12, "RIT"); // set values manually
+        ob.display(); // show values
+    }
+}
