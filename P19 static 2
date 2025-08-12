@@ -1,0 +1,17 @@
+// StaticDemo.java
+class StaticDemo {
+    static int a = 42;
+    static int b = 99;
+
+    static void callme() {
+        System.out.println("a = " + a);
+    }
+}
+
+// StaticByName.java
+class StaticByName {
+    public static void main(String[] args) {
+        StaticDemo.callme(); // calling static method
+        System.out.println("b = " + StaticDemo.b); // accessing static variable
+    }
+}
